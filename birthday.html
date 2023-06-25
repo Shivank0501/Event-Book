@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Birthday Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            color: #ff8c00;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        button[type="submit"] {
+            background-color: #ff8c00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ff6600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px #ccc;
+            border-radius: 10px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #999;
+        }
+
+        footer a {
+            color: #ff8c00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Birthday Page</h2>
+    <form method="post" action="/action_page.php">
+        {% csrf_token %}
+        <label for="destination-city">Your City:</label>
+        <input type="text" id="destination-city" name="destination-city" required>
+
+        <label for="your-budget">Your Total Budget:</label>
+        <input type="text" id="your-budget" name="your-budget" required>
+
+        <label for="total-guest">Total Number of Guests:</label>
+        <input type="text" id="total-guest" name="total-guest" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+        <p>&copy; Event Management Company. All rights reserved.</p>
+        <p>created by - Shivank shukla</p>
+    </footer>
+</body>
+</html>
